@@ -9,6 +9,7 @@
   &__content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 
@@ -37,10 +38,13 @@
 }
 
 .content-cart {
-  &__list {
-    width: 800px;
-  }
   &__total {
+    width: 364px;
+    padding: 38px 31px;
+    margin-left: 55px;
+    margin-top: 10px;
+    background-color: #f6f8fa;
+    border-radius: 5px;
   }
 }
 
@@ -74,18 +78,18 @@
     position: relative;
     display: flex;
     gap: 2px;
-    margin-right: 8px;
+    margin-right: 6px;
   }
   &__price {
     font-family: "Roboto", "sans-serif";
     font-weight: 500;
     font-size: 18px;
-    margin-right: 52px;
+    margin-right: 10px;
   }
   &__btn {
     position: absolute;
-    top: 8px;
-    right: 20px;
+    top: 33px;
+    right: -23px;
     background-color: transparent;
     border: none;
     align-self: flex-start;
@@ -200,8 +204,6 @@
       height: 50px;
       background: url("../images/icons/service.svg") no-repeat;
     }
-  }
-  &__text {
   }
 }
 

@@ -1,0 +1,19 @@
+@import "fonts";
+@import "./header.scss";
+@import "./main.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #1f2432;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 80px;
+  margin: 0 auto;
+}

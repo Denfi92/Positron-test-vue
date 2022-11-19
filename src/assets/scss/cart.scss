@@ -38,6 +38,9 @@
 }
 
 .content-cart {
+  &__list {
+    width: 800px;
+  }
   &__total {
     width: 364px;
     padding: 38px 31px;
@@ -84,12 +87,12 @@
     font-family: "Roboto", "sans-serif";
     font-weight: 500;
     font-size: 18px;
-    margin-right: 10px;
+    margin-right: 52px;
   }
   &__btn {
     position: absolute;
     top: 33px;
-    right: -23px;
+    right: 19px;
     background-color: transparent;
     border: none;
     align-self: flex-start;

@@ -1,8 +1,6 @@
 @import "fonts";
-@import "./header.scss";
-@import "./main.scss";
-@import "./cart.scss";
-@import "./total.scss";
+@import "./header/header.scss";
+@import "./main/main.scss";
 
 * {
   padding: 0;

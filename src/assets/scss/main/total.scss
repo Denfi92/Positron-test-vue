@@ -53,6 +53,9 @@
     font-weight: 400;
     color: #ffffff;
     margin-bottom: 12px;
+    &:hover {
+      background-color: #0a5992;
+    }
     &--empty {
       border: 1px solid #0069b4;
       background-color: #ffffff;

@@ -1,0 +1,123 @@
+.slider {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 47px;
+  }
+}
+
+.slider-header {
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  &__pagination {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+  }
+}
+
+.pagination {
+  &__btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #90a2b5;
+    &:hover {
+      background-color: #7a8fa7;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 13px;
+      background-color: #ffffff;
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 32%;
+      left: 48%;
+      width: 2px;
+      height: 13px;
+      background-color: #ffffff;
+      transform: rotate(45deg);
+    }
+    &--next {
+      transform: rotate(180deg);
+    }
+  }
+  &__counter {
+    font-size: 18px;
+    color: #797b86;
+  }
+  &__current {
+    font-size: 24px;
+    color: #212121;
+  }
+}
+
+.slider-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 305px;
+  height: 563px;
+  padding: 25px;
+  background-color: #f6f8fa;
+  border-radius: 5px;
+  &__img {
+    max-width: 245px;
+    margin-bottom: 10px;
+  }
+  &__info {
+    text-align: left;
+    margin-bottom: auto;
+  }
+  &__btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0069b4;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+.card-info {
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  &__description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.card-footer {
+  &__price {
+    text-align: left;
+    margin-bottom: 22px;
+  }
+}
+
+.card-price {
+  &__ruble {
+    font-family: "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 7px;
+  }
+  &__euro {
+    font-size: 16px;
+    color: #797b86;
+  }
+}

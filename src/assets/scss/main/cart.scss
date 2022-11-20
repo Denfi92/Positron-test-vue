@@ -1,4 +1,5 @@
 .cart {
+  margin-bottom: 107px;
   &__header {
     display: flex;
     justify-content: space-between;
@@ -10,6 +11,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    &--empty {
+      font-size: 54px;
+      text-align: center;
+    }
   }
 }
 
@@ -34,6 +39,9 @@
     padding-bottom: 7px;
     color: #797b86;
     text-underline-offset: 3px;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -143,9 +151,12 @@
       left: 40%;
       background-color: #33374e;
     }
+    &:hover {
+      background-color: #57596d;
+    }
   }
   &__increment {
-    border-radius: 4px 0 0 4px;
+    border-radius: 0 4px 4px 0;
     &:before {
       content: "";
       position: absolute;
@@ -163,6 +174,9 @@
       position: absolute;
       top: 41%;
       left: 48%;
+    }
+    &:hover {
+      background-color: #57596d;
     }
   }
   &__price {

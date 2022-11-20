@@ -9,12 +9,30 @@
     <section class="cart">
       <div class="cart__header header-cart">
         <h1 class="header-cart__title">Ваша корзина</h1>
-        <span class="header-cart__amount">4 товара</span>
-        <button class="header-cart__btn">Очистить корзину</button>
+        <span class="header-cart__amount"
+          >{{ $store.getters.totalQuantity }} товара</span
+        >
+        <button class="header-cart__btn" @click="clearCart">
+          Очистить корзину
+        </button>
       </div>
-      <div class="cart__content content-cart">
-        <CartList />
-        <CartTotal />
+      <p v-if="!cart.items.length" class="cart__content--empty">
+        {{
+          submit
+            ? `Ваш заказ: Сумма ${order.total}, 
+        количество: ${order.quantity},
+        Установка: ${order.service}`
+            : "Корзина пуста"
+        }}
+      </p>
+      <div class="cart__content content-cart" v-else>
+        <CartList :items="cart.items" :service="cart.service" />
+        <CartTotal
+          :total="$store.getters.totalPrice"
+          :quantity="$store.getters.totalQuantity"
+          :service="cart.service"
+          @submitBtn="initOrder"
+        />
       </div>
     </section>
     <section class="slider">
@@ -29,6 +47,34 @@ import CartTotal from "./CartTotal";
 import CartSlider from "./CartSlider";
 
 export default {
+  props: {
+    cart: Object,
+  },
+  data() {
+    return {
+      submit: false,
+    };
+  },
   components: { CartList, CartTotal, CartSlider },
+  methods: {
+    clearCart() {
+      this.$store.commit("clearCart");
+    },
+    initOrder({ total, service, quantity }) {
+      const order = {
+        items: this.cart.items,
+        quantity,
+        total,
+        service,
+      };
+      this.submit = true;
+      setTimeout(() => {
+        this.submit = false;
+      }, 5000);
+      console.log(order);
+      this.order = order;
+      this.clearCart();
+    },
+  },
 };
 </script>
